@@ -4,11 +4,17 @@ var jshint = require('gulp-jshint');
 var plumber = require('gulp-plumber');
 var cleanCss = require('gulp-clean-css');
 var uglyfly = require('gulp-uglyfly');
-var sass = require('gulp-scss');
+var sass = require('gulp-sass');
 var gutil = require('gulp-util');
 var ftp = require('vinyl-ftp');
 var stylish = require('jshint-stylish');
 var rename = require('gulp-rename');
+
+var js_asset_path = 'wp-content/themes/socnetwork-theme/assets/js/**/*.js';
+var js_path = 'wp-content/themes/socnetwork-theme/js';
+
+var scss_asset_path = 'wp-content/themes/socnetwork-theme/assets/scss/**/*.scss';
+var css_path = 'wp-content/themes/socnetwork-theme/css';
 
 gulp.task('jshint', function() {
     return gulp.src('resources/assets/js/*.js')
@@ -18,7 +24,7 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('compress', ['jshint'], function() {
-    gulp.src('resources/assets/js/*.js')
+    gulp.src(js_asset_path)
         .pipe(uglyfly({
             mangle: false
         }))
@@ -26,19 +32,25 @@ gulp.task('compress', ['jshint'], function() {
         //     suffix: '.min',
         //     extname: '.js'
         // }))
-        .pipe(gulp.dest('public/src/js'))
+        .pipe(gulp.dest(js_path))
 });
 
 gulp.task('styles', function () {
-    return gulp.src('resources/assets/scss/app.scss')
+    return gulp.src(scss_asset_path)
         .pipe(sass.sync().on('error', sass.logError))
-        .pipe(gulp.dest('public/src/css'))
-        .pipe(cleanCss())
+        .pipe(gulp.dest(css_path))
+        //.pipe(cleanCss())
         // .pipe(rename({
         //     suffix: '.min',
         //     extname: '.css'
         // }))
-        .pipe(gulp.dest('public/src/css'))
+        //.pipe(gulp.dest('public/src/css'))
+});
+
+gulp.task('cleanCss', function () {
+   return gulp.src(css_path)
+       .pipe(cleanCss)
+       .pipe(gulp.dest(css_path))
 });
 
 var globs = [
@@ -64,8 +76,8 @@ var globs = [
 // });
 
 gulp.task('watch', function() {
-    gulp.watch('resources/assets/js/**/*.js', ['compress']);
-    gulp.watch('resources/assets/scss/**/*.scss', ['styles']);
+    gulp.watch(js_asset_path, ['compress']);
+    gulp.watch(scss_asset_path, ['styles']);
 });
 
 gulp.task('default', ['watch']);

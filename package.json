@@ -1,39 +1,31 @@
 {
-  "name": "socnetwork",
+  "name": "wp-socnetwork",
   "version": "1.0.0",
-  "description": "\"Social Network\"",
   "main": "gulpfile.js",
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git clone https://milan88@bitbucket.org/milan88/socnetwork.git"
+    "url": "git+https://milan88@bitbucket.org/milan88/wp-socnetwork.git"
   },
   "author": "Milan Stojanovic",
   "license": "ISC",
+  "homepage": "https://bitbucket.org/milan88/wp-socnetwork#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.7",
+    "gulp-clean-css": "^2.0.10",
     "gulp-jshint": "^2.0.1",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.1",
-    "gulp-uglify": "^1.5.3",
+    "gulp-sass": "^2.3.2",
     "gulp-uglyfly": "^1.4.2",
     "gulp-util": "^3.0.7",
-    "gulp-watch": "^4.3.5",
+    "gulp-watch": "^4.3.8",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0",
-    "vinyl-ftp": "^0.4.5"
-  },
-  "dependencies": {
-    "express": "^4.14.0",
-    "ioredis": "^2.0.1",
-    "redis": "^2.6.2",
-    "socket.io": "^1.4.6"
+    "vinyl-ftp": "^0.5.0"
   }
 }
