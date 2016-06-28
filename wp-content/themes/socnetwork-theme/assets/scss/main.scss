@@ -12,3 +12,68 @@ html {
 #wpadminbar {
   display: none;
 }
+
+.site-footer {
+  width: 100%;
+  max-width: 1440px;
+  position: absolute;
+  bottom: 0;
+  padding: 30px 0;
+  background-color: #e7e7e7;
+}
+
+.current-menu-item a {
+  &:link {
+    color: #555 !important;
+    background-color: #e7e7e7;
+  }
+
+  &:visited {
+    color: #555 !important;
+    background-color: #e7e7e7;
+  }
+
+  &:hover {
+    color: #555 !important;
+    background-color: #e7e7e7;
+  }
+
+}
+
+ul.footer-menu-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    text-decoration: none;
+    list-style: none;
+    float: left;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      color: #777;
+
+      &:link {
+        color: #777;
+      }
+
+      &:visited {
+        color: #777;
+      }
+
+      &:focus {
+        color: #777;
+      }
+
+      &:hover {
+        color: #333;
+        text-decoration: none;
+      }
+    }
+
+  }
+}

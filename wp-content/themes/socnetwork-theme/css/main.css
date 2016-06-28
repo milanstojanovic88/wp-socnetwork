@@ -9,3 +9,45 @@ html {
 
 #wpadminbar {
   display: none; }
+
+.site-footer {
+  width: 100%;
+  max-width: 1440px;
+  position: absolute;
+  bottom: 0;
+  padding: 30px 0;
+  background-color: #e7e7e7; }
+
+.current-menu-item a:link {
+  color: #555 !important;
+  background-color: #e7e7e7; }
+
+.current-menu-item a:visited {
+  color: #555 !important;
+  background-color: #e7e7e7; }
+
+.current-menu-item a:hover {
+  color: #555 !important;
+  background-color: #e7e7e7; }
+
+ul.footer-menu-list {
+  margin: 0;
+  padding: 0; }
+  ul.footer-menu-list li {
+    text-decoration: none;
+    list-style: none;
+    float: left;
+    margin-right: 30px; }
+    ul.footer-menu-list li:last-child {
+      margin-right: 0; }
+    ul.footer-menu-list li a {
+      color: #777; }
+      ul.footer-menu-list li a:link {
+        color: #777; }
+      ul.footer-menu-list li a:visited {
+        color: #777; }
+      ul.footer-menu-list li a:focus {
+        color: #777; }
+      ul.footer-menu-list li a:hover {
+        color: #333;
+        text-decoration: none; }

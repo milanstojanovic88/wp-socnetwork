@@ -29,22 +29,18 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
+
+                <?php wp_nav_menu(['theme_location' => 'primary', 'menu_class' => 'nav navbar-nav', 'container' => 'ul']); ?>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href=""><?php echo (is_user_logged_in()) ? 'Logout' : 'Login' ?></a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav>
     <div class="container">
-
-<!--        <div class="row">-->
-<!--            <div class="col-md-12">-->
-<!--                <h1>--><?php //bloginfo('name'); ?><!--</h1>-->
-<!--                <h4>--><?php //bloginfo('description'); ?><!--</h4>-->
-<!--                <hr>-->
-<!--            </div>-->
-<!--        </div>-->
         <div class="page-header">
             <h1><?php bloginfo('name'); ?> <small><?php bloginfo('description'); ?></small></h1>
         </div>
+
+        <?php if(is) ?>
