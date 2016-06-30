@@ -10,7 +10,7 @@ var ftp = require('vinyl-ftp');
 var stylish = require('jshint-stylish');
 var rename = require('gulp-rename');
 
-var js_asset_path = 'wp-content/themes/socnetwork-theme/assets/js/**/*.js';
+var js_asset_path = 'wp-content/themes/socnetwork-theme/assets/js/*.js';
 var js_path = 'wp-content/themes/socnetwork-theme/js';
 
 var scss_asset_path = 'wp-content/themes/socnetwork-theme/assets/scss/**/*.scss';

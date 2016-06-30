@@ -12,6 +12,11 @@
 
         <?php wp_head(); ?>
     </head>
+    <style>
+        html {
+            margin-top: 0 !important;
+        }
+    </style>
     <body <?php body_class(); ?>>
 
     <nav class="navbar navbar-default">
@@ -30,17 +35,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                <?php wp_nav_menu(['theme_location' => 'primary', 'menu_class' => 'nav navbar-nav', 'container' => 'ul']); ?>
+                <?php wp_nav_menu(['theme_location' => 'primary', 'menu_class' => 'nav navbar-nav custom-nav', 'container' => 'ul']); ?>
+                <?php get_search_form(); ?>
+                <ul class="nav navbar-nav custom-nav navbar-right">
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href=""><?php echo (is_user_logged_in()) ? 'Logout' : 'Login' ?></a></li>
+                    <li><a href="#"><?php echo (is_user_logged_in()) ? 'Logout' : 'Login' ?></a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav>
     <div class="container">
-        <div class="page-header">
-            <h1><?php bloginfo('name'); ?> <small><?php bloginfo('description'); ?></small></h1>
-        </div>
-
-        <?php if(is) ?>

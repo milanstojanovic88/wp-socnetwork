@@ -9,36 +9,88 @@ html {
   padding: 0;
 }
 
+body {
+  min-height: 100vh;
+}
+
 #wpadminbar {
   display: none;
 }
 
+
+.navbar-default {
+  background-color: #404040;
+  border-radius: 0;
+
+  .navbar-brand {
+    color: #f2f2f2;
+
+    &:visited {
+      color: #f2f2f2;
+    }
+
+    &:hover {
+      color: #c1c1c1;
+    }
+
+    &:focus {
+      color: #c1c1c1;
+    }
+
+    &:active {
+      color: #c1c1c1;
+    }
+  }
+}
+
+.navbar-default .navbar-nav>li>a {
+  &:visited {
+    color: #f2f2f2;
+  }
+
+  &:link {
+    color: #f2f2f2;
+  }
+
+  &:hover {
+    color: #c1c1c1;
+  }
+
+  &:focus {
+    color: #c1c1c1;
+  }
+
+  &:active {
+    color: #c1c1c1;
+  }
+}
+
+.current-menu-item a {
+  color: #333 !important;
+  background-color: #e7e7e7;
+
+  &:visited {
+    color: #333 !important;
+    background-color: #e7e7e7;
+  }
+
+  &:hover {
+    color: #333 !important;
+    background-color: #e7e7e7 !important;
+  }
+
+}
+
+
 .site-footer {
   width: 100%;
-  max-width: 1440px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   padding: 30px 0;
   background-color: #e7e7e7;
 }
 
-.current-menu-item a {
-  &:link {
-    color: #555 !important;
-    background-color: #e7e7e7;
-  }
 
-  &:visited {
-    color: #555 !important;
-    background-color: #e7e7e7;
-  }
-
-  &:hover {
-    color: #555 !important;
-    background-color: #e7e7e7;
-  }
-
-}
 
 ul.footer-menu-list {
   margin: 0;
@@ -76,4 +128,14 @@ ul.footer-menu-list {
     }
 
   }
+}
+
+.wp-post-image {
+  float: left;
+  margin-right: 10px;
+}
+
+.mini-meta {
+  font-size: 0.8em;
+  color: #4196BF;
 }
