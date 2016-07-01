@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+<section class="content-section">
+    <div class="container">
+
 
 <div class="page-header">
     <h1><?php bloginfo('name'); ?> <small><?php bloginfo('description'); ?></small></h1>
@@ -48,6 +51,7 @@ if(have_posts()) {
     echo '<p>No content fount</p>';
 }
 ?>
-
+    </div>
+</section>
 <?php get_footer(); ?>
 

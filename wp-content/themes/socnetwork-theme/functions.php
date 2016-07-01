@@ -36,3 +36,49 @@
     }
 
     add_action('after_setup_theme', 'socnetworkTheme_setup');
+
+    function custom_widgets_init () {
+        // Sidebars
+        register_sidebar([
+            'name' => 'Right Side Sidebar',
+            'id' => 'right_side_sidebar',
+            'before_widget' => '<div class="col-md-4">',
+            'after_widget' => '</div>'
+        ]);
+    }
+
+    add_action('widgets_init', 'custom_widgets_init');
+
+    function Socnetwork_customize_register ($wp_customize) {
+         $wp_customize->add_setting('soc_link_color', [
+            'default' => '#337ab7',
+             'transport' => 'refresh'
+         ]);
+
+        $wp_customize->add_section('soc_standard_colors', [
+           'title' => __('Standard Colors', 'Socnetwork'),
+            'priority' => 30
+        ]);
+
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'soc_link_color_control', [
+            'label' => __('Link Color', 'Socnetwork'),
+            'section' => 'soc_standard_colors',
+            'settings' => 'soc_link_color'
+        ]));
+    }
+
+    add_action('customize_register', 'Socnetwork_customize_register');
+
+    function Socnetwork_customize_css () {
+        ?>
+
+        <style type="text/css">
+            a:link, a:visited {
+                color: <?php echo get_theme_mod('soc_link_color'); ?>
+            }
+        </style>
+
+        <?php
+    }
+
+    add_action('wp_head', 'Socnetwork_customize_css');
