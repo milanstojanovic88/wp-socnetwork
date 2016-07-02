@@ -38,8 +38,8 @@
                 <?php wp_nav_menu(['theme_location' => 'primary', 'menu_class' => 'nav navbar-nav custom-nav', 'container' => 'ul']); ?>
                 <?php get_search_form(); ?>
                 <ul class="nav navbar-nav custom-nav navbar-right">
-
-                    <li><a href="#"><?php echo (is_user_logged_in()) ? 'Logout' : 'Login' ?></a></li>
+                    <li><a href="<?php echo get_dashboard_url(); ?>">Dashboard</a></li>
+                    <li><a href="<?php echo (is_user_logged_in() ? wp_logout_url(home_url('/')) : home_url('/login/')); ?>"><?php echo (is_user_logged_in()) ? __('Logout') : __('Login'); ?></a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
