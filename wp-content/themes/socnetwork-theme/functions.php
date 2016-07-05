@@ -116,7 +116,6 @@
     add_filter( 'authenticate', 'verify_username_password', 1, 3);
 
     //logout redirect
-
     function logout_page() {
         $login_page  = home_url( '/' );
         wp_redirect( $login_page . "?login=false" );
