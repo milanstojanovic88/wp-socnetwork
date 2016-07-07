@@ -13,7 +13,7 @@
             <?php
             if(is_active_sidebar('right_side_sidebar')) {
             ?>
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <?php
                 } else {
                 ?>

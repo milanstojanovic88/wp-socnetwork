@@ -8,14 +8,16 @@ html {
   padding: 0; }
 
 body {
-  min-height: 100vh; }
+  min-height: 100vh;
+  background: linear-gradient(#ccc, #fff); }
 
 #wpadminbar {
   display: none; }
 
 .navbar-default {
   background-color: #404040;
-  border-radius: 0; }
+  border-radius: 0;
+  border: none; }
   .navbar-default .navbar-brand {
     color: #f2f2f2; }
     .navbar-default .navbar-brand:visited {
@@ -52,6 +54,9 @@ body {
     color: #333 !important;
     background-color: #e7e7e7 !important; }
 
+body > .container > .row {
+  border-radius: 10px 10px 0 0; }
+
 .site-footer {
   width: 100%;
   position: relative;
@@ -59,9 +64,18 @@ body {
   bottom: 0;
   padding: 30px 0;
   background-color: #e7e7e7; }
+  .site-footer .container > .row {
+    background-color: transparent; }
 
 .content-section {
   min-height: 76vh; }
+
+.row {
+  background-color: #fff; }
+
+.page-header {
+  padding: 15px 15px;
+  padding-top: 0; }
 
 ul.footer-menu-list {
   margin: 0;
@@ -84,6 +98,16 @@ ul.footer-menu-list {
       ul.footer-menu-list li a:hover {
         color: #333;
         text-decoration: none; }
+
+.gallery-image-responsive {
+  border: none !important;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
 
 .wp-post-image {
   float: left;

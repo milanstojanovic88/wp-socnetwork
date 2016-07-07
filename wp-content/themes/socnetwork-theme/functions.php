@@ -42,7 +42,7 @@
         register_sidebar([
             'name' => 'Right Side Sidebar',
             'id' => 'right_side_sidebar',
-            'before_widget' => '<div class="col-md-4">',
+            'before_widget' => '<div class="col-md-3">',
             'after_widget' => '</div>'
         ]);
     }
@@ -122,3 +122,12 @@
         exit;
     }
     add_action('wp_logout','logout_page');
+
+
+//    // Class to images in gallery
+//    function WPTime_add_custom_class_to_all_images($content){
+//        $my_custom_class = "img-responsive img-rounded";
+//        $add_class = str_replace('<img class="', '<img class="'.$my_custom_class.' ', $content);
+//        return $add_class;
+//    }
+//    add_filter('the_content', 'WPTime_add_custom_class_to_all_images');

@@ -11,6 +11,7 @@ html {
 
 body {
   min-height: 100vh;
+  background: linear-gradient(#ccc, #fff);
 }
 
 #wpadminbar {
@@ -21,6 +22,7 @@ body {
 .navbar-default {
   background-color: #404040;
   border-radius: 0;
+  border: none;
 
   .navbar-brand {
     color: #f2f2f2;
@@ -81,6 +83,10 @@ body {
 
 }
 
+body>.container>.row {
+  border-radius: 10px 10px 0 0;
+
+}
 
 .site-footer {
   width: 100%;
@@ -89,10 +95,23 @@ body {
   bottom: 0;
   padding: 30px 0;
   background-color: #e7e7e7;
+
+  .container>.row {
+    background-color: transparent;
+  }
 }
 
 .content-section {
   min-height: 76vh;
+}
+
+.row {
+  background-color: #fff;
+}
+
+.page-header {
+  padding: 15px 15px;
+  padding-top: 0;
 }
 
 ul.footer-menu-list {
@@ -131,6 +150,17 @@ ul.footer-menu-list {
     }
 
   }
+}
+
+.gallery-image-responsive {
+  border: none !important;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .wp-post-image {
